@@ -12,6 +12,6 @@ class RelationshipFavoritesController < ApplicationController
     micropost = Micropost.find(params[:micropost_id])
     current_user.unfavo(micropost)
     flash[:success] = 'お気に入りを解除しました。'
-    redirect_to root_url
+    redirect_back(fallback_location: root_path) 
   end
 end
