@@ -9,6 +9,9 @@
       <% end %>
     </aside>
     <div class="col-xs-8">
+      <%= link_to 'Favorites', favos_user_path(current_user) %>
+    </div>
+    <div class="col-xs-8">
       <%= render 'microposts/microposts', microposts: @microposts %>
     </div>
   </div>
